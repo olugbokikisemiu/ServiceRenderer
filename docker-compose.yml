@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  mongo: 
+    ports: ["5000:27017"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sleek_user
+      MONGO_INITDB_ROOT_PASSWORD: sleek_pass
+    build:
+      context: "build/mongo"
+  redis:
+    ports: ["6379:6379"]
+    build:
+      context: build/redis

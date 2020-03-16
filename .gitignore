@@ -13,3 +13,8 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+features/accounts/.DS_Store
+.DS_Store
+.gitignore
+go.mod
+go.sum
