@@ -1,0 +1,16 @@
+live_url: "https://sleekServices:8080"
+log_level: "debug"
+addr: "localhost:9090"
+test: true
+mongodb:
+  username: "sleek_user"
+  password: "sleek_pass"
+  db: sleek_services
+  uri: "localhost:5000"
+  authname: "admin"
+redis:
+  host: "localhost:6379"
+  password: ""
+session: 
+  secret: "12345"
+  secure_cookie: false
