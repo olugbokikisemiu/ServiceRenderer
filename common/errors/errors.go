@@ -9,6 +9,7 @@ import (
 type ErrorCode string
 
 const (
+	ErrUnknown            = ErrorCode("unknown_error")
 	ErrInvalidPinFormat   = ErrorCode("invalid_pin_format")
 	ErrNoDocumentFound    = ErrorCode("no_document_found")
 	ErrBadActor           = ErrorCode("badactor_error")
@@ -17,6 +18,7 @@ const (
 	ErrUnableToGetSession = ErrorCode("unable_to_get_session")
 	ErrNotFound           = ErrorCode("not_found")
 	ErrAuthenticated      = ErrorCode("user_authenticated")
+	ErrUnauthenticated    = ErrorCode("permission_denied")
 )
 
 // ErrorMessages all error messages to return to user
@@ -44,6 +46,12 @@ var ErrorMessages = map[ErrorCode]*Error{
 	},
 	ErrAuthenticated: {
 		ErrMessage: "User already authenticated",
+	},
+	ErrUnauthenticated: {
+		ErrMessage: "Permission denied",
+	},
+	ErrUnknown: {
+		ErrMessage: "An unknown error occured",
 	},
 }
 
